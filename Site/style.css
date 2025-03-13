@@ -1,0 +1,19 @@
+h1 {
+    color: #0B0901;
+    font-family: "Source Sans 3", sans-serif;
+    text-align: center;
+    font-size: 40px; 
+    background-color: #D0253C;
+    padding: 2em 0; 
+}
+p {
+    color: #0B0901;
+    font-family: "Maitree", serif;
+    text-align: left;
+    font-size: 18px;
+}
+.nav-link {
+    color:#0B0901;
+    text-align: center;
+    
+}
