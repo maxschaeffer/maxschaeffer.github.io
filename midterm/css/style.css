@@ -1,16 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Italiana&display=swap');
+
 h1 {
     font-family: "Italiana", sans-serif;
+    font-size: 6em;
 }
 
 h2,
 h3 {
     font-family: "Abel", sans-serif;
+    text-align: center;
+    font-size: 1em;
 }
 
 body {
     font-family: "Rubik", sans-serif;
     background-color: #0C0E0C;
     color: #FAFCEF;
+    font-size: 14px;
 }
 
 .text-center {
@@ -20,7 +27,42 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.img-container {
+header {
     position: relative;
-    display: inline-block;
+    text-align: center;
+}
+
+.container {
+    width: 55%;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+#graphics {
+    background-color: #FAFCEF;
+    color: #0C0E0C;
+    padding: 5%;
+}
+
+#graphics.row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.text-block {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #E18d58;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .container {
+        width: 95%;
+    }
 }
