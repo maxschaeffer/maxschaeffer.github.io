@@ -1,0 +1,29 @@
+h1 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: "Trirong", serif;
+    font-size: 2em;
+}
+
+p {
+    font-family: "Overpass", sans-serif;
+    font-size: 1em;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: rgb(242, 166, 2);
+    text-align: center;
+    padding:5%;
+}
+.img-fluid {
+max-height:600px;
+justify-content:center;
+}
+body{
+    background-color: rgb(242, 166, 2);
+
+}
