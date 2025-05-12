@@ -31,8 +31,12 @@ body {
 }
 
 #article {
-    padding-right: 5%;
     padding-left: 5%;
+    padding-right: 5%
+}
+
+#description {
+    padding: 5%;
 }
 
 figcaption {
@@ -41,8 +45,9 @@ figcaption {
     color: #555;
     text-align: center;
 }
-#graphics{
-    background-color:#ffff;
-    padding-left:5%;
-    padding-right:5%;
+
+#graphics {
+    background-color: #ffff;
+    padding-left: 5%;
+    padding-right: 5%;
 }
