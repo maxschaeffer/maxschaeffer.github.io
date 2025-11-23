@@ -8,7 +8,7 @@
 
 <meta name="author" content="Max Schaeffer">
 
-<title>Buzz Williams – Max Schaeffer - Sports Data</title>
+<title>Can Maryland men’s basketball win without elite offensive rebounding? – Max Schaeffer - Sports Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -150,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Buzz Williams</h1>
+      <h1 class="title">Can Maryland men’s basketball win without elite offensive rebounding?</h1>
                       </div>
   </div>
     
@@ -218,7 +218,7 @@ Caused by warning:
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>buzz <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(buzzvt, buzztamu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>buzzfull <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(buzzvt, buzztamu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
@@ -232,7 +232,7 @@ Caused by warning:
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>buzzoffensiverebounding <span class="ot">&lt;-</span> buzz <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>buzzoffensiverebounding <span class="ot">&lt;-</span> buzzfull <span class="sc">|&gt;</span> </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Season) <span class="sc">|&gt;</span> </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">avgoffrebs =</span> <span class="fu">mean</span>(TeamOffRebounds), </span>
@@ -240,6 +240,9 @@ Caused by warning:
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>Buzz Williams didn’t mince words after Maryland snagged just four offensive rebounds against Marquette while giving up 20.</p>
+<p>“We are beyond bad at it,” Williams said.</p>
+<p>This is especially noteworthy because the recent era of Buzz Williams basketball has been synonymous with rebounding particularly on the offensive end. His last three years at Texas A&amp;M his teams were above the national average in offensive rebounding, and were able to pick up over 20 wins.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -252,7 +255,10 @@ Caused by warning:
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>wins, <span class="at">y=</span>avgoffrebs, <span class="at">label=</span>Season)</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a> <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>)) <span class="sc">+</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">8.778389</span>) <span class="sc">+</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Can Buzz Williams win without offensive rebounding"</span>, <span class="at">subtitle=</span><span class="st">"The Terps grabbed just four offensive rebounds against Marquette"</span>,)  <span class="sc">+</span> </span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -262,6 +268,8 @@ Caused by warning:
 </div>
 </div>
 </div>
+<p>While Maryland can improve on the offensive glass, it seems to lack the horses to be an elite offensive rebounding team like Buzz’s have been in recent years with the Aggies. A currently injured Pharrel Payne is the team’s best threat on the glass and the team’s option at backup center seem to be six-foot-nine Collin Metcalf or six-foot-eight Elijah Saunders who averaged a combined three offensive boards a game last season.</p>
+<p>An important note about that game against Marquette though is that despite the rebounding catastrophe the Terps won, so maybe they can sustain their offense without crashing the glass like Williams teams of recent. Williams has produced seasons of over 20 wins twice whie being below the national average in offensive rebounds per game, both during his years at Virginia Tech, but it certainly powered his less glamorous slower Texas A&amp;M offenses and covered up some of their deficiencies.</p>
 
 
 
